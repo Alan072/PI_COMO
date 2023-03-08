@@ -1,120 +1,59 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.104.2">
-    <title>Login</title>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"  rel="stylesheet" />
+<!-- component -->
+<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      body{
-          background-image: url("upq.png");
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: cover;
-        }
-    </style>
-  </head>
-  <body class="text-center">
+</a>
+<body class = "body bg-white dark:bg-[#0F172A]">
+    <div class = "bg-black before:animate-pulse before:bg-gradient-to-b before:from-gray-900 overflow-hidden before:via-[#00FF00] before:to-gray-900 before:absolute ">
+        <div id="myDIV" >
+            <div class = "w-[100vw] h-[100vh] px-3 sm:px-5 flex items-center justify-center absolute">
+                <div class = "w-full sm:w-1/2 lg:2/3 px-6 bg-gray-500 bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-sm text-white z-50 py-4  rounded-lg">
+                    <div class = "w-full flex justify-center text-[#00FF00] text-xl mb:2 md:mb-5">
+                        Sign In
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block mb-2 text-xs font-medium text-white">Your email</label>
+                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 md:p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@neurolink.com" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="password" class="block mb-2 text-xs font-medium text-white">Your password</label>
+                        <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 md:p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                    </div>
+                    <div class = "flex flex-row justify-between">
+                        <div class = "text-white text-sm md:text-md ">Forgot Password</div>
+                        <div class = "text-[#00FF00] text-sm md:text-md">Signup</div>
+                    </div>
+                    <div class = "mt-4 md:mt-10 w-full flex justify-center text-sm md:text-xl bg-[#00FF00] py-2 rounded-md">
+                        Login
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
     
-<main class="form-signin w-100 m-auto">
-  <br>
-  <center>
-    <!--Aqui comienza la card-->
-    <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-      <center>
-        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="blue" class="bi bi-person-circle" viewBox="0 0 16 16">
-          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-        </svg>
-      </center>
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Inicio de Sesión</h5>
-      <form action="{{ route('NHome') }}" method="post">
-        @csrf
-        <div class="form-floating">
-          <label for="floatingInput">Matricula</label><br>
-          <input type="number" placeholder="Ingresar matricula" name="Matricula" value="{{ old('Matricula')}}" onchange="validarMatricula(this.value)" >
-          
-        </div>
-        <div class="form-floating">
-          <br>
-          <label for="floatingPassword">Contraseña</label><br>
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" onchange="validarPass(this.value)" >
-          
-        </div>
     
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Recuerdame
-          </label>
-        </div>
-          <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800" type="submit">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                Ingresar
-            </span>
-          </button>
-      </form>
-  </a>
-  </center>
-</main>
+    <script>
+        const para = document.createElement("div");
+        para.className = 'flex flex-wrap gap-0.5 h-screen items-center justify-center  relative';
+            let el = '<div class = "  transition-colors duration-[1.5s] hover:duration-[0s] border-[#00FF00] h-[calc(5vw-2px)] w-[calc(5vw-2px)] md:h-[calc(4vw-2px)] md:w-[calc(4vw-2px)] lg:h-[calc(3vw-4px)] lg:w-[calc(3vw-4px)] bg-gray-900 hover:bg-[#00FF00]"></div>'
+            for (var k = 1; k<=1000; k++){
+                el+= '<div class = " transition-colors duration-[1.5s] hover:duration-[0s] border-[#00FF00] h-[calc(5vw-2px)] w-[calc(5vw-2px)] md:h-[calc(4vw-2px)] md:w-[calc(4vw-2px)] lg:h-[calc(3vw-4px)] lg:w-[calc(3vw-4px)] bg-gray-900 hover:bg-[#7598a7]"></div>';
+            };
+    
+            para.innerHTML = el;
+        document.getElementById("myDIV").appendChild(para);
+    </script>
     
   </body>
   <script type="text/javascript" src=" {{ URL::asset('validacionLogin.js') }} "></script>
