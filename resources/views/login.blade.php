@@ -9,10 +9,10 @@
 </head>
 
 <!-- component -->
-<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
-</a>
 <body class = "body bg-white dark:bg-[#0F172A]">
+    <form method="POST" action={{ route('NHome') }}>
+        @csrf
     <div class = "bg-black before:animate-pulse before:bg-gradient-to-b before:from-gray-900 overflow-hidden before:via-[#00FF00] before:to-gray-900 before:absolute ">
         <div id="myDIV" >
             <div class = "w-[100vw] h-[100vh] px-3 sm:px-5 flex items-center justify-center absolute">
@@ -32,9 +32,11 @@
                         <div class = "text-white text-sm md:text-md ">Forgot Password</div>
                         <div class = "text-[#00FF00] text-sm md:text-md">Signup</div>
                     </div>
-                    <div class = "mt-4 md:mt-10 w-full flex justify-center text-sm md:text-xl bg-[#00FF00] py-2 rounded-md">
-                        Login
+                    
+                    <div  class = "mt-4 md:mt-10 w-full flex justify-center text-sm md:text-xl bg-[#00FF00] py-2 rounded-md">
+                        <button type="submit" name="btnGuardar">Ingresar</button>
                     </div>
+                </form>    
         
                 </div>
             </div>
