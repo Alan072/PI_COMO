@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControladorPaginas;
+use App\Http\Controllers\controladorBD;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,3 +16,9 @@ use App\Http\Controllers\ControladorPaginas;
 
 Route::get('/', [ControladorPaginas::class, 'flogin'])->name('Nlogin'); 
 Route::post('/home', [ControladorPaginas::class, 'fhome'])->name('NHome'); 
+
+Route::post('/entrada', function () {
+    return view('entrada');
+})->name('Centrada');
+
+Route::post('/insertardatos', [controladorBD::class, 'store'])->name('CInsertado');
