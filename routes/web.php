@@ -22,6 +22,6 @@ Route::get('/home', [ControladorPaginas::class, 'fhome2'])->name('NHome');
 
 
 Route::get('/entrada', [ControladorPaginas::class, 'entrada'])->name('Centrada');
-#Route::get('/entrada', [ControladorPaginas::class, 'entrada2'])->name('Centrada');
+Route::post('/entrada', [controladorBD::class, 'store'])->name('Centrada');
 
 
