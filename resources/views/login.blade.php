@@ -22,11 +22,11 @@
                     </div>
                     <div class="mb-6">
                         <label for="email" class="block mb-2 text-xs font-medium text-white">Your email</label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 md:p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@neurolink.com" required>
+                        <input type="email"  onchange="validarEmail(this.value)"  id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 md:p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@neurolink.com" required>
                     </div>
                     <div class="mb-6">
                         <label for="password" class="block mb-2 text-xs font-medium text-white">Your password</label>
-                        <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 md:p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                        <input type="password" onchange="validarPass(this.value)" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 md:p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                     </div>
                     <div class = "flex flex-row justify-between">
                         <div class = "text-white text-sm md:text-md ">Forgot Password</div>
@@ -58,6 +58,6 @@
     </script>
     
   </body>
-  <script type="text/javascript" src=" {{ URL::asset('validacionLogin.js') }} "></script>
+  <script type="text/javascript" src=" {{ URL::asset('validacion.js') }} "></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>    
 </html>
