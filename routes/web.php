@@ -14,11 +14,14 @@ use App\Http\Controllers\controladorBD;
 |
 */
 
-Route::get('/', [ControladorPaginas::class, 'flogin'])->name('Nlogin'); 
+Route::post('/', [ControladorPaginas::class, 'flogin'])->name('Nlogin'); 
+Route::get('/', [ControladorPaginas::class, 'flogin2'])->name('Nlogin'); 
+
 Route::post('/home', [ControladorPaginas::class, 'fhome'])->name('NHome'); 
+Route::get('/home', [ControladorPaginas::class, 'fhome2'])->name('NHome'); 
 
-Route::post('/entrada', function () {
-    return view('entrada');
-})->name('Centrada');
 
-Route::post('/insertardatos', [controladorBD::class, 'store'])->name('CInsertado');
+Route::post('/entrada', [ControladorPaginas::class, 'entrada'])->name('Centrada');
+#Route::get('/entrada', [ControladorPaginas::class, 'entrada2'])->name('Centrada');
+
+

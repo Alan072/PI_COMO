@@ -68,7 +68,7 @@ class controladorBD extends Controller
     public function edit($id)
     {
         //
-        $consultaid =DB::table('clase')->where('id',$id)->First();
+        $consultaid =DB::table('producto')->where('id',$id)->First();
         return view('editarConsulta', compact('consultaid'));
     }
 
@@ -81,7 +81,7 @@ class controladorBD extends Controller
      */
     public function update(Request $req, $id)
     {
-        DB::table('clase')->where('id',$id)->update([
+        DB::table('producto')->where('id',$id)->update([
             "Nombre"=>$req->input('txtTitulo'),
             "Temporada"=>$req->input('txtTitulo1'),
             "Precio"=>$req->input('txtTitulo2'),
@@ -100,13 +100,13 @@ class controladorBD extends Controller
      * @return \Illuminate\Http\Response
      */
     public function confirm($id){
-        $consultaid=DB::table('clase')->where('id',$id)->first();
+        $consultaid=DB::table('producto')->where('id',$id)->first();
         return view('confirmElim', compact('consultaid'));
     }
 
      public function destroy($id)
     {
-        DB::table('clase')->where('id',$id)->delete();
+        DB::table('producto')->where('id',$id)->delete();
         return redirect('consulta')->with('mensaje', 'registro borrado');
     }
 }
