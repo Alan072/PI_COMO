@@ -1,22 +1,54 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+}
   
-  .navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
   
-  .navbar li {
-    display: inline-block;
-    margin-right: 20px;
-  }
+.navbar li {
+  display: inline-block;
+  margin-right: 20px;
+}
   
-  .navbar li:last-child {
-    margin-right: 0;
-  }
+.navbar li:last-child {
+  margin-right: 0;
+}
+
+#boton {
+  background-color: blue; 
+  color: white;
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px gray;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:hover {
+  background-color: #3E8E41;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}

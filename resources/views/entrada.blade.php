@@ -8,14 +8,30 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Entrada</title>
         <style>
+            h1 {
+                font-size: 32px;
+                font-weight: bold;
+                text-align: center;
+                margin: 20px 0;
+                color: #000000;
+                padding: 50px;
+            }
+
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
             .container {
                 width: 80%;
-                margin: 0 auto;
                 text-align: center;
             }
 
             form {
-                width: 400px;
+                width: 600px;
                 margin: 0 auto;
                 text-align: left;
             }
@@ -30,8 +46,9 @@
 
             label {
                 display: inline-block;
-                width: 100px;
-                text-align: right;
+                width: 520px;
+                text-align: left;
+                margin-left: 10px;
                 margin-right: 10px;
             }
 
@@ -42,7 +59,8 @@
                 box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
                 padding: 20px;
                 margin: 20px;
-                width: 300px;
+                width: 600px;
+                margin-top: 550px;
             }
 
             .card-blue {
@@ -51,36 +69,55 @@
         </style>
     </head>
     <body>
-        <center>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Ingresa datos</h5>
-        </center>
-
-            <div class="container">
-                <div class="card card-blue">
-
-                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            </div>
-                <br><br>
-                <br><br>
-                <br><br>
-                
-                <div class="">
-                    <form method="post" action="{{ route('Nentrada') }}">
-                        @csrf
-                        <div class="box">
-                            <div align="left">
-                                <label class="form-label" name="labelTitulo">Nombre: </label>
-                            </div>
-                            <input type="text" class="form-control" name="txtTitulo" onchange="validarNombre(this.value)" value="{{ old('txtTitulo')}}"></input>
+        <h1>Ingresa los datos de Entrada:</h1>
+        <div class="container">
+            <div class="card card-blue">
+                <form method="post" action="{{ route('Nentrada') }}">
+                    @csrf
+                    <div class="box">
+                        <div align="left">
+                            <label class="form-label" name="labelTitulo">Nombre del producto: </label>
                         </div>
-                        <div class="box">
-                            <div align="left">
-                                <label class="form-label" name="labelTitulo">Descripcion: </label>
-                            </div>
-                            <input type="text" class="form-control" name="txtTitulo1" onchange="validarDescripcion(this.value)" value="{{ old('txtTitulo')}}"></input>
+                        <input type="text" class="form-control" name="txtTitulo" onchange="validarNombre(this.value)" value="{{ old('txtTitulo')}}"></input>
+                    </div>
+                    <div class="box">
+                        <div align="left">
+                            <label class="form-label" name="labelTitulo">Descripcion: </label>
                         </div>
-                        <div class="box">
-                            <br>
+                        <input type="text" class="form-control" name="txtTitulo1" onchange="validarDescripcion(this.value)" value="{{ old('txtTitulo')}}"></input>
+                    </div>
+                    <div class="box">
+                        <div align="left">
+                            <label class="form-label" name="labelTitulo">Fecha de entrada: </label>
+                        </div>
+                        <input type="text" class="form-control" name="txtTitulo1" onchange="validarDescripcion(this.value)" value="{{ old('txtTitulo')}}"></input>
+                    </div>
+                    <div class="box">
+                        <div align="left">
+                            <label class="form-label" name="labelTitulo">Proveedor: </label>
+                        </div>
+                        <input type="text" class="form-control" name="txtTitulo1" onchange="validarDescripcion(this.value)" value="{{ old('txtTitulo')}}"></input>
+                    </div>
+                    <div class="box">
+                        <div align="left">
+                            <label class="form-label" name="labelTitulo">Cantidad: </label>
+                        </div>
+                        <input type="text" class="form-control" name="txtTitulo1" onchange="validarDescripcion(this.value)" value="{{ old('txtTitulo')}}"></input>
+                    </div>
+                    <div class="box">
+                        <div align="left">
+                            <label class="form-label" name="labelTitulo">Costo unitario: </label>
+                        </div>
+                        <input type="text" class="form-control" name="txtTitulo1" onchange="validarDescripcion(this.value)" value="{{ old('txtTitulo')}}"></input>
+                    </div>
+                    <div class="box">
+                        <div align="left">
+                            <label class="form-label" name="labelTitulo">Total: </label>
+                        </div>
+                        <input type="text" class="form-control" name="txtTitulo1" onchange="validarDescripcion(this.value)" value="{{ old('txtTitulo')}}"></input>
+                    </div>
+                    <div class="box">
+                        <br>
                             <center>
                                 <button type="submit" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Guardar</button>     
                             </center>
