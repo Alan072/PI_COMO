@@ -26,13 +26,38 @@ class controladorPaginas extends Controller
         
     }
 
-    function entrada(){
+    function fentrada(){
         return view ('entrada');
         
     }
 
-    function entrada2(){
+    function fentrada2(){
         return view ('entrada');
+        
+    }
+
+    function fsalida(){
+        return view ('salida');
+        
+    }
+
+    function fadmin(){
+        return view ('admin');
+        
+    }
+
+    function fproductos(){
+        return view ('productos');
+        
+    }
+
+    function ftareas(){
+        return view ('tareas');
+        
+    }
+
+    function finventario(){
+        return view ('inventario');
         
     }
 }

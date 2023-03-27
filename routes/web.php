@@ -21,7 +21,18 @@ Route::post('/home', [ControladorPaginas::class, 'fhome'])->name('NHome');
 Route::get('/home', [ControladorPaginas::class, 'fhome2'])->name('NHome'); 
 
 
-Route::get('/entrada', [ControladorPaginas::class, 'entrada'])->name('Centrada');
-Route::post('/entrada', [controladorBD::class, 'store'])->name('Centrada');
+Route::get('/entrada', [ControladorPaginas::class, 'fentrada'])->name('Nentrada');
+Route::post('/entrada', [controladorBD::class, 'store'])->name('Nentrada');
+
+
+Route::get('/salida', [ControladorPaginas::class, 'fsalida'])->name('Nsalida');
+
+Route::get('/admin', [ControladorPaginas::class, 'fadmin'])->name('Nadmin');
+
+Route::get('/productos', [ControladorPaginas::class, 'fproductos'])->name('Nproductos');
+
+Route::get('/tareas', [ControladorPaginas::class, 'ftareas'])->name('Ntareas');
+
+Route::get('/inventario', [ControladorPaginas::class, 'finventario'])->name('Ninventario');
 
 
