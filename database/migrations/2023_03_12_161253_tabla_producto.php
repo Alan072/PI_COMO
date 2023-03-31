@@ -35,8 +35,8 @@ return new class extends Migration
             $table->increments('id_almacen');
             $table->integer('stock');
             $table->float('precio');
-            $table->unsignedInteger('producto_id');
-            $table->unsignedInteger('ubicacion_id');
+            $table->integer('producto_id')->unsigned();
+            $table->integer('ubicacion_id')->unsigned();
             $table->foreign('producto_id')->references('id_producto')->on('producto')->onDelete('cascade');
             $table->foreign('ubicacion_id')->references('id_ubicacion')->on('ubicacion')->onDelete('cascade');
             $table->timestamps();
@@ -44,7 +44,7 @@ return new class extends Migration
         
         Schema::create('entrada', function (Blueprint $table) {
             $table->increments('id_entrada');
-            $table->unsignedInteger('producto_id');
+            $table->integer('producto_id')->unsigned();
             $table->foreign('producto_id')->references('id_producto')->on('producto')->onDelete('cascade');
             $table->timestamps();
         });
@@ -58,15 +58,15 @@ return new class extends Migration
             $table->string('correo');
             $table->string('telefono_celular');
             $table->string('telefono_fijo');
-            $table->unsignedInteger('rol_desempena');
+            $table->integer('rol_desempena')->unsigned();
             $table->foreign('rol_desempena')->references('id_rol')->on('rol_desempena')->onDelete('cascade');
             $table->timestamps();
         });
         
         Schema::create('salida', function (Blueprint $table) {
             $table->increments('id_salida');
-            $table->unsignedInteger('producto_id');
-            $table->unsignedInteger('usuario_id');
+            $table->integer('producto_id')->unsigned();
+            $table->integer('usuario_id')->unsigned();
             $table->foreign('producto_id')->references('id_producto')->on('producto')->onDelete('cascade');
             $table->foreign('usuario_id')->references('id_usuario')->on('tipo_usuario')->onDelete('cascade');
             $table->timestamps();
@@ -75,9 +75,9 @@ return new class extends Migration
         Schema::create('tarea', function (Blueprint $table) {
             $table->increments('id_tarea');
             $table->text('descripcion');
-            $table->unsignedInteger('salida_id');
-            $table->unsignedInteger('ubicacion_id');
-            $table->unsignedInteger('entrada_id');
+            $table->integer('salida_id')->unsigned();
+            $table->integer('ubicacion_id')->unsigned();
+            $table->integer('entrada_id')->unsigned();
             $table->foreign('salida_id')->references('id_salida')->on('salida')->onDelete('cascade');
             $table->foreign('ubicacion_id')->references('id_ubicacion')->on('ubicacion')->onDelete('cascade');
             $table->foreign('entrada_id')->references('id_entrada')->on('entrada')->onDelete('cascade');

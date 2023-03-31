@@ -1,0 +1,23 @@
+
+php artisan make:model NombreModelo
+
+php artisan make:model Ubicacion
+php artisan make:model RolDesempena
+php artisan make:model Producto
+php artisan make:model AlmacenProducto
+php artisan make:model Entrada
+php artisan make:model TipoUsuario
+php artisan make:model Salida
+php artisan make:model Tarea
+
+
+php artisan make:factory nombreModelo --model
+
+php artisan make:factory Ubicacion  --model
+php artisan make:factory RolDesempena   --model
+php artisan make:factory Producto   --model
+php artisan make:factory AlmacenProducto   --model
+php artisan make:factory Entrada   --model
+php artisan make:factory TipoUsuario   --model
+php artisan make:factory Salida   --model
+php artisan make:factory Tarea   --model
